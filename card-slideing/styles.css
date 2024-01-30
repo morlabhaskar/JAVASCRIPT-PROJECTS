@@ -1,0 +1,57 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-review {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    box-shadow: 2px 2px 5px grey;
+    /* position: relative; */
+    /* overflow: hidden; */
+
+
+}
+.total-review .slider {
+    /* height: 300px; */
+    width: 90%;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+
+}
+.main-slid {
+    height: 600px;
+}
+.total-review .slider .head {
+    
+    display: flex;
+
+}
+.total-review .slider .head img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    border: 1px solid grey;
+}
+.total-review .actions {
+    height: 300px;
+    background-color: orangered;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
+.total-review .actions i {
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
