@@ -3,7 +3,7 @@ var slider = document.querySelectorAll('.slider')
         var downarrow = document.querySelector('.down-arrow')
 
         let x = 0;
-        uparrow.onclick = function() {
+        uparrow.onClick = function() {
             x = x - 300;
             slider.style.top = x + "px";
         }

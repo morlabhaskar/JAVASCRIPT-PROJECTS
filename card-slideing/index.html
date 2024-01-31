@@ -14,26 +14,54 @@
 </head>
 
 <body>
-    <div class="total-review">
+    <div class="total-review mt-5">
         <div class="main-slid">
-            <div class="slider p-2 mt-3">
+            <div class="slider p-2 ">
                 <div class="head ml-2">
                     <img src="/Images/img1.jpeg" alt="">
-                    <div class="name ml-2 mt-3">
+                    <div class="name ml-2">
                         <h4>Name</h4>
                         <p>role</p>
                     </div>
                 </div>
-                <p class="p-2 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat distinctio quo
+                <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat distinctio quo
                     sequi tempore dolor,
                     repellendus eius tenetur, quis sapiente dignissimos laborum illo rem minima aspernatur voluptas?
                     Alias
                     officia sunt totam? laborum illo rem minima aspernatur voluptas? Alias</p>
             </div>
-            <div class="slider p-2 mt-3">
+            <div class="slider p-2">
                 <div class="head ml-2">
                     <img src="/Images/img2.jpeg" alt="">
-                    <div class="name ml-2 mt-3">
+                    <div class="name ml-2">
+                        <h4>Name</h4>
+                        <p>role</p>
+                    </div>
+                </div>
+                <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat distinctio quo
+                    sequi tempore dolor,
+                    repellendus eius tenetur, quis sapiente dignissimos laborum illo rem minima aspernatur voluptas?
+                    Alias
+                    officia sunt totam? laborum illo rem minima aspernatur voluptas? Alias</p>
+            </div>
+            <div class="slider p-2">
+                <div class="head ml-2">
+                    <img src="/Images/img3.jpg" alt="">
+                    <div class="name ml-2">
+                        <h4>Name</h4>
+                        <p>role</p>
+                    </div>
+                </div>
+                <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat distinctio quo
+                    sequi tempore dolor,
+                    repellendus eius tenetur, quis sapiente dignissimos laborum illo rem minima aspernatur voluptas?
+                    Alias
+                    officia sunt totam? laborum illo rem minima aspernatur voluptas? Alias</p>
+            </div>
+            <div class="slider p-2">
+                <div class="head ml-2">
+                    <img src="/Images/img4.jpeg" alt="">
+                    <div class="name ml-2">
                         <h4>Name</h4>
                         <p>role</p>
                     </div>
@@ -44,15 +72,15 @@
                     Alias
                     officia sunt totam? laborum illo rem minima aspernatur voluptas? Alias</p>
             </div>
-            <div class="slider p-2 mt-3">
+            <div class="slider p-2">
                 <div class="head ml-2">
-                    <img src="/Images/img3.jpg" alt="">
-                    <div class="name ml-2 mt-3">
+                    <img src="/Images/img5.jpeg" alt="">
+                    <div class="name ml-2">
                         <h4>Name</h4>
                         <p>role</p>
                     </div>
                 </div>
-                <p class="p-2 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat distinctio quo
+                <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat distinctio quo
                     sequi tempore dolor,
                     repellendus eius tenetur, quis sapiente dignissimos laborum illo rem minima aspernatur voluptas?
                     Alias
@@ -65,11 +93,37 @@
             </div>
     </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var container = document.querySelector('.main-slid');
+        var uparrows = document.querySelectorAll('.up-arrow');
+        var downarrows = document.querySelectorAll('.down-arrow');
+        var sliders = document.querySelectorAll('.slider');
+
+        let x = 0;
+        let y = 0;
+
+        uparrows.forEach(function (uparrow) {
+            uparrow.addEventListener('click', function () {
+                if (y > -(sliders.length - 1)) {
+                    y = y - 300;
+                    sliders.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+                }
+            });
+        });
+
+        downarrows.forEach(function (downarrow) {
+            downarrow.addEventListener('click', function () {
+                if (y < 0) {
+                    y = y + 300;
+                    sliders.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+                }
+            });
+        });
+    });
+</script>
 
 
-
-
-    <script src="script.js"></script>
 </body>
 
 </html>
